@@ -1,4 +1,4 @@
-# gl [![Build Status](https://travis-ci.org/go-gl/gl.svg?branch=master)](https://travis-ci.org/go-gl/gl) [![GoDoc](https://godoc.org/github.com/go-gl/gl?status.svg)](https://godoc.org/github.com/go-gl/gl)
+# gl
 
 This repository holds Go bindings to various OpenGL versions. They are auto-generated using [Glow](https://github.com/go-gl/glow).
 
@@ -16,14 +16,14 @@ Usage
 
 Use `go get -u` to download and install the prebuilt packages. The prebuilt packages support OpenGL versions 2.1, 3.1, 3.2, 3.3, 4.1, 4.2, 4.3, 4.4, 4.5, 4.6 across both the core and compatibility profiles and include all extensions. Pick whichever one(s) you need:
 
-    go get -u github.com/go-gl/gl/v{3.2,3.3,4.1,4.2,4.3,4.4,4.5,4.6}-{core,compatibility}/gl
-    go get -u github.com/go-gl/gl/v3.1/gles2
-    go get -u github.com/go-gl/gl/v2.1/gl
+    go get -u github.com/gonutz/gl/v{3.2,3.3,4.1,4.2,4.3,4.4,4.5,4.6}-{core,compatibility}/gl
+    go get -u github.com/gonutz/gl/v3.1/gles2
+    go get -u github.com/gonutz/gl/v2.1/gl
 
 Once the bindings are installed you can use them with the appropriate import statements.
 
 ```Go
-import "github.com/go-gl/gl/v3.3-core/gl"
+import "github.com/gonutz/gl/v3.3-core/gl"
 
 func main() {
 	window := ... // Open a window.
@@ -44,7 +44,7 @@ A note about threading and goroutines. The bindings do not expose a mechanism to
 Examples
 --------
 
-Examples illustrating how to use the bindings are available in the [example](https://github.com/go-gl/example) repo. There are examples for [OpenGL 4.1 core](https://github.com/go-gl/example/tree/master/gl41core-cube) and [OpenGL 2.1](https://github.com/go-gl/example/tree/master/gl21-cube).
+Examples illustrating how to use the bindings are available in the [example](https://github.com/gonutz/example) repo. There are examples for [OpenGL 4.1 core](https://github.com/gonutz/example/tree/master/gl41core-cube) and [OpenGL 2.1](https://github.com/gonutz/example/tree/master/gl21-cube).
 
 Function Loading
 ----------------
@@ -59,7 +59,7 @@ These gl bindings are generated using the [Glow](https://github.com/go-gl/glow) 
 It is required to have `glow` source in the same Go workspace (since relative paths are used) and the `glow` binary should be in your `$PATH`. Doable with `go get -u github.com/go-gl/glow` if your `$GOPATH/bin` is in your `$PATH`.
 
 ```bash
-go generate -tags=gen github.com/go-gl/gl
+go generate -tags=gen github.com/gonutz/gl
 ```
 
 More information about these bindings can be found in the [Glow repository](https://github.com/go-gl/glow).
